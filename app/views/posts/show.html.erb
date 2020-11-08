@@ -1,0 +1,19 @@
+<div class="main posts-show">
+    <div class="container">
+        <div class="posts-show-item">
+            <%# 投稿内容の表示 %>
+            <p>
+                <%= @post.content %>
+            </p>
+            <%# 投稿時間の表示 %>
+            <div class="post-time">
+                <%= @post.created_at %>
+            </div>
+            <%# Edit画面への遷移 %>
+            <div class="post-menus">
+                <%= link_to("編集", "/posts/#{@post.id}/edit") %>
+                <%= link_to("削除", "/posts/#{@post.id}/destroy", {method:"post"}) %>
+            </div>
+        </div>
+    </div>
+</div>
