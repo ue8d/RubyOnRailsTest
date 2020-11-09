@@ -10,4 +10,11 @@ Rails.application.routes.draw do
   get "posts/:id/edit" => "posts#edit"
   post "posts/:id/update" => "posts#update"
   post "posts/:id/destroy" => "posts#destroy"
+
+  get "signup" => "users#new"
+  get 'users/index' => "users#index"
+  post "users/create" => "users#create"
+  get "users/:id" => "users#show"
+  get "users/:id/edit" => "users#edit"
+  post "users/:id/update" => "users#update"
 end
